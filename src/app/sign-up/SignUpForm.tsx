@@ -51,9 +51,8 @@ const SignUpForm = () => {
       setError(res.message);
     } else {
       setSuccess(res.message);
+      form.reset();
     }
-
-    form.reset();
   };
 
   return (
