@@ -119,4 +119,8 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .center {
+    @apply flex items-center justify-center min-h-[calc(100vh-64px)];
+  }
 }

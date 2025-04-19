@@ -8,24 +8,26 @@ const links = [
     href: "#",
   },
   {
-    label: "Link One",
+    label: "Link Two",
     href: "#",
   },
   {
-    label: "Link One",
+    label: "Link Three",
     href: "#",
   },
 ];
 
 const Navbar = () => {
   return (
-    <header className=" bg-red-500">
-      <nav className="container mx-auto flex items-center justify-between w-full">
+    <header className=" border-b h-16">
+      <nav className="container mx-auto flex items-center justify-between w-full h-full">
         <Link href="/">Home</Link>
 
         <div className="flex items-center gap-2">
           {links.map((link) => (
-            <Link href={link.href}>{link.label}</Link>
+            <Link href={link.href} key={link.label}>
+              {link.label}
+            </Link>
           ))}
         </div>
       </nav>
